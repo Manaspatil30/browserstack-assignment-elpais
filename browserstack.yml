@@ -1,0 +1,41 @@
+userName: manaspatil_ptzIDn
+accessKey: qychr6DEJyVRer8EXWwf
+
+framework: testng
+projectName: BrowserStack Sample
+buildName: "ElPais Build"
+
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: Chrome
+    browserVersion: latest
+  - os: OS X
+    osVersion: Tahoe
+    browserName: Edge
+    browserVersion: latest
+  - os: Windows
+    osVersion: 11
+    browserName: Firefox
+    browserVersion: latest
+  - deviceName: iPhone 15 Pro Max
+    osVersion: 26
+    browserName: safari
+    deviceOrientation: portrait
+  - deviceName: Samsung Galaxy S23 Ultra
+    osVersion: 13.0
+    browserName: samsung
+    deviceOrientation: portrait
+
+
+parallelsPerPlatform: 1
+
+debug: true
+networkLogs: true
+consoleLogs: info
+
+# Test Observability is an intelligent test reporting & debugging product. It collects data using the SDK. Read more about what data is collected at https://www.browserstack.com/docs/test-observability/references/terms-and-conditions
+# Visit observability.browserstack.com to see your test reports and insights. To disable test observability, specify `testObservability: false` in the key below.
+testObservability: true
+
+source: testng:intellij:2.0.1-IC
