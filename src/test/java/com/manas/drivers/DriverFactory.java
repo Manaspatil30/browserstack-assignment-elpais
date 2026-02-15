@@ -16,14 +16,9 @@ public class DriverFactory {
     }
 
     public static void createDriver() throws Exception {
-//        String runOn = System.getProperty("runOn", "bs");
-        String headless = System.getProperty("headless", "false");
-
         //Local Execution
             ChromeOptions options = new ChromeOptions();
-            if(headless.equalsIgnoreCase("true")){
-                options.addArguments("--headless=new");
-            }
+
             options.addArguments("--window-size=1400,900");
             TL.set(new ChromeDriver(options));
     }
